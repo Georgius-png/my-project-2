@@ -1,0 +1,248 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image:  linear-gradient(rgba(0,0,0,0.3),
+    rgba(0,0,0,0.5)), url(https://demos.onepagelove.com/html/aria/images/header-background.jpg) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header .logo-area {
+    margin-left: 5%;
+}
+
+.header img {
+    width: 135px;
+    height: 135px;
+}
+
+.hamburger-menu {
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    right: 40px;
+    top: 50px;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    z-index: 100;
+}
+
+
+.line {
+    height: 3px;
+    width: 100%;
+    /* background-color: rgb(0, 255, 234); */
+     /* background-color: rgba(38, 216, 201, 0.623);  */
+     background: #3ab368;
+    margin-top: 5px;
+    transition: 1s;
+}
+
+.sidebar-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar-icons li {
+    list-style: none;
+    margin: 20px;
+}
+
+.sidebar-icons li a:hover {
+    color: #0d8067;
+    transition: 0.5s;
+}
+
+.sidebar-icons a {
+    font-size: 24px;
+    color: #fff;
+}
+
+.sidebar {
+    width: 250px;
+    height: 70vh;
+    position: fixed;
+    color: #fff;
+    /* background: #023435; */
+    border: 3px solid #0d8067;
+    border-radius: 60% 14% 30% 40% ;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: right 1.4s cubic-bezier(1,0,0,1);
+    right: -250px;
+    z-index: 100;
+}
+
+.change .sidebar {
+    right: 0px;
+    transition: 1.5s;
+    /* background-image:  linear-gradient(rgba(0,0,0,0.3),
+    rgba(0,0,0,0.5)), url(https://demos.onepagelove.com/html/aria/images/header-background.jpg) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    background: transparent;
+}
+
+.sidebar ul li  {
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 20px;
+    list-style: none;
+}
+
+.sidebar ul li {
+    cursor: pointer;
+}
+
+
+.header ul li::after {
+    content: '';
+    width: 0;
+    background: #0d8067;
+    height: 3px;
+    margin: auto;
+    display: block;
+    transition: 0.5s;
+    cursor: pointer;
+}   
+
+.header ul li:hover::after {
+    width: 30%;
+    transition: 0.5s;
+}
+
+.change .line-1 {
+    transform: rotate(405deg) translate(0.5rem, 0.3rem); 
+    transition: 1.5s;
+    } 
+
+.change .line-2 {
+    opacity: 0;
+    visibility: hidden; 
+} 
+
+.change .line-3 { 
+     transform: rotate(-405deg) translate(0.5rem, -0.3rem);
+    transition: 1s; 
+} 
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    animation: moveBanner 1.5s forwards;
+    transition: 1.5s;
+}
+
+.change .header-text  {
+    display: none;
+    transform: 1.5s;
+}
+
+.header-text  h1 {
+    font-size: 70px;
+    font-weight: 400;
+}
+
+.header-text p {
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.btn {
+    margin-top: 20px;
+    width: 100px;
+    height: 50px;
+    background: transparent;
+    border:1px solid #00ffc8;
+    color: #fff;
+    border-radius: 20% 10% 15% 30%;
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: #00ffc8;
+    transition: 0.5s;
+}
+
+
+@keyframes moveBanner {
+    0% {
+      transform: translateY(40rem) rotateY(-20deg);
+    }
+    100% {
+      transform: translateY(0) rotateY(0);
+      opacity: 1;
+    }
+  }
+
+
+  /* --- INTRO --- */
+
+
+.intro {
+      display: flex;
+      padding-top: 100px;
+  }
+
+.intro-left-text-area {
+      width: 60%;
+      margin: auto;
+  }
+
+h5 {
+    color: rgb(27, 131, 27);
+  }
+
+.intro-left-text-area h5 {
+      padding-top: 25px;
+  }
+
+.intro-left-text-area h1 {
+    padding-top: 20px;
+    color: rgb(46, 39, 39);
+    font-size: 35px;
+}
+
+.intro-left-text-area p {
+    padding-top:  20px;
+    color: rgb(153, 145, 145);
+    font-size: 18px;
+}
+
+.intro-left-text-area h3 {
+    padding-top: 20px;
+    color: rgb(46, 39, 39);
+}
+
+.intro-right {
+    width:100%;
+    margin: auto;
+}
+
+.intro-right-img {
+    overflow: hidden;
+}
+.intro-right-img img {
+    width: 90%;
+    transition: 1s;
+}
+
+.intro-right-img img:hover {
+    transform: scale(1.1);
+}
